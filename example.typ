@@ -1,16 +1,17 @@
 #import "conf.typ": conf, guia, pronombre
 #let mostrar_guias = true
 #show: conf.with(
-    titulo: "El Título de mi Tema",
-    autor: (nombre: "María Echón", pronombre: pronombre.elle),
-    profesores: ((nombre: "Juan Pérez", pronombre: pronombre.el),),
-    coguias: ((nombre: "Juana Pérez", pronombre: pronombre.ella),),
-    supervisor: (nombre: "María Gómez", pronombre: pronombre.ella),
-    anno: "2023",
+    titulo: "Clasificador de Deep Learning para determinar importancia de acciones realizadas por jugadores en partidos de fútbol",
+    autor: (nombre: "Cristian Lillo", pronombre: pronombre.el),
+    informe: false,
+    modalidad: "Doble Titulación con Magíster",
+    profesores: ((nombre: "Javier Bustos", pronombre: pronombre.el),),
+    coguias: (),
+    anno: "2024",
     espaciado_titulo: 2fr,
 )
 
-#guia(visible: mostrar_guias)[Se debe quitar todas las guías (estas cajas grises) antes de entregar el documento.
+#guia(visible: false)[Se debe quitar todas las guías (estas cajas grises) antes de entregar el documento.
 
 Para ello, se debe cambiar el valor de la variable `mostrar_guias` a `false` en la segunda línea del archivo.
 
@@ -21,11 +22,11 @@ Los parámetros que acepta la función `conf` son:
 - autor: Un diccionario con campos `nombre` y `pronombre`. Para los pronombres, importar el diccionario `pronombre` desde `conf.typ`. Los valores disponibles son `pronombre.el`, `pronombre.ella` y `pronombre.elle`.
 - informe: `false` si es la propuesta de tema, `true` si es el informe final.
 - codigo: Omitir si es la propuesta de tema. Si es el informe final, colocar el código del ramo. (CC6908 para malla v3, CC6907 para malla v5)
-- modalidad: Puede ser \"Memoria\", \"Práctica extendida\", \"Titulación con Magíster\" o \"Doble Titulación de Dos Especialidades\"
+- modalidad: Puede ser \"Memoria\", \"Práctica extendida\", \"Doble Titulación con Magíster\" o \"Doble Titulación de Dos Especialidades\"
 - profesores: Lista de profesores guías. Cada elemento de la lista es un diccionario con campos `nombre` y `pronombre`. Si es un solo elemento, recordar poner una coma al final: `(dict_guia,)`
 - supervisor: Información del supervisor en caso de práctica extendida. Es un diccionario con campos `nombre` y `pronombre`.
 - anno: Año en que se entrega el informe. Por defecto se usa el año actual.
-- espaciado_titulo: Espaciado extra antes del título y al rededor de autor. Por defecto es `1fr`. Se puede usar `2fr` para un espaciado doble, `3fr` para un espaciado triple, etc.
+- espaciado_titulo: Espaciado extra antes del título y alrededor de autor. Por defecto es `1fr`. Se puede usar `2fr` para un espaciado doble, `3fr` para un espaciado triple, etc.
 
 Como aproximación, se espera que la propuesta sea de 5 a 10 páginas.
 
@@ -52,7 +53,7 @@ En el caso de la práctica extendida, incluir detalles de la organización, su q
 
 Ejemplos de referencias:
 - Conferencia: @CorlessJK97 // azucar sintactica para #cite("CorlessJK97")
-- Revista y Tesis: #cite("NewmanT42", "Turing38") // para citas múltiples se usa #cite
+- Revista y Tesis: cite("NewmanT42", "Turing38") // para citas múltiples se usa #cite
 
 = Objetivos
 
@@ -67,7 +68,7 @@ Los objetivos deberían ser específicos, medibles, alcanzables y relevantes al 
 Al final del trabajo, debería ser factible saber si se ha logrado los objetivos enumerados acá, o saber cuán bien se han logrado, o no. Por ejemplo, si la meta es tener algo eficiente en términos de tiempo, debería haber una forma de evaluar o estudiar los tiempos. Acá tendrás que definir la forma general en que se podrá evaluar el trabajo.
 
 (No hay que poner texto acá. Se puede empezar directamente con el objetivo general.)]
-	
+
 
 == Objetivo General
 
@@ -82,13 +83,13 @@ El objetivo debería ser específico, medible, alcanzable, relevante al problema
 
 #guia(visible: mostrar_guias)[
 Una _lista_ de los hitos principales que se quieren lograr para (intentar) cumplir con el objetivo general. Divide el objetivo general en varios hitos que formarán las etapas del trabajo.
-		
+
 Cada objetivo debería ser específico, medible, alcanzable, relevante al problema, y acotado en tiempo.
-		
-No se debería escribir más de un párrafo por hito. 
-		
+
+No se debería escribir más de un párrafo por hito.
+
 Los objetivos específicos deberían \"sumar\" al objetivo general.
-		
+
 (Una lista de 3 a 7 párrafos)]
 
 + ...
@@ -105,14 +106,14 @@ Describe cómo vas a poder evaluar el trabajo en términos de cuán bien cumple 
 
 #guia(visible: mostrar_guias)[
 Una descripción general de la solución propuesta: los datos, las técnicas, las tecnologías, las herramientas, los lenguajes, los marcos, etc., que se usarán para intentar lograr los objetivos planteados. Aquí hay que contestar la pregunta: ¿_cómo_ vas a lograr los objetivos planteados? Aquí, sí, está muy bien hablar de Javascript, CNNs, Numpy, Django, índices invertidos, árboles wavelet, privacidad diferencial, PageRank, Diffie--Hellman, triangulaciones de Delaunay, CUDA, Postgres, etc.
-    
+
 (1 a 2 páginas)]
 
 = Plan de Trabajo (Preliminar)
 
 #guia(visible: mostrar_guias)[
 Aquí se puede dar una lista preliminar de los pasos que se van a seguir para desarrollar la solución propuesta. La lista debería contemplar la evaluación del trabajo y la escritura del informe final del trabajo de título (memoria o práctica extendida). Siendo un plan preliminar, su propósito es dar una mejor idea de la factibilidad del tema y el trabajo que implica, pero se pueden aplicar cambios al plan para el informe final de este curso.
-    
+
 (0.5 a 2 páginas)]
 
 + ...
