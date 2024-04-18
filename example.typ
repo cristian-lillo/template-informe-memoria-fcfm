@@ -1,7 +1,7 @@
 #import "conf.typ": conf, guia, pronombre
 #let mostrar_guias = true
 #show: conf.with(
-    titulo: "Clasificador de Deep Learning para determinar importancia de acciones realizadas por jugadores en partidos de fútbol",
+    titulo: "Clasificador de Aprendizaje Automático para determinar Acciones Clave en el Desempeño Futbolístico de Jugadores",
     autor: (nombre: "Cristian Lillo", pronombre: pronombre.el),
     informe: false,
     modalidad: "Doble Titulación con Magíster",
@@ -35,7 +35,7 @@ No es necesario poner texto antes de la introducción.]
 
 = Introducción
 
-#guia(visible: mostrar_guias)[Dar una introducción al contexto del tema.
+#guia(visible: false)[Dar una introducción al contexto del tema.
 
 Explicar, en términos generales, el problema abordado.
 
@@ -44,6 +44,12 @@ Motivar la necesidad, la importancia y/o el valor de tener una (mejor) solución
 En el caso de la práctica extendida, incluir detalles de la organización, su quehacer, el equipo y el supervisor con los cuales se va a trabajar, la relevancia del problema a la organización, etc.
 
 (1 a 2 páginas)]
+
+En la actualidad, el fútbol es un deporte que ha evolucionado en términos de tecnología y análisis de datos. Los clubes de fútbol han comenzado a utilizar herramientas tecnológicas para mejorar el rendimiento de sus jugadores y equipos. Sin embargo, en las etapas formativas, no se dispone de un modelo que permita evaluar el rendimiento de los futbolistas de manera objetiva. Esto conlleva a que los entrenadores deban evaluar el rendimiento de los jugadores en base a su experiencia y conocimiento del deporte, lo que puede llevar a sesgos y subjetividad.
+
+En este contexto, el presente proyecto busca desarrollar un clasificador de aprendizaje automático que permita determinar las acciones clave en el desempeño futbolístico de los jugadores. Este clasificador permitirá a los entrenadores evaluar el rendimiento de manera objetiva y precisa. Para ello, se utilizarán técnicas de Machine Learning o Deep Learning para analizar los datos de los jugadores y determinar las acciones clave que influyen en su desempeño.
+
+El desarrollo de este clasificador ayudará a identificar áreas de mejora y a tomar decisiones informadas en base a los datos. Además, se podrá utilizar en las etapas formativas de los clubes de fútbol para identificar y potenciar el talento desde edades tempranas, contribuyendo al desarrollo y formación de futbolistas.
 
 = Situación Actual
 
