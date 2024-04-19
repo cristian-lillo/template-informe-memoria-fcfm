@@ -85,6 +85,8 @@ El objetivo debería ser específico, medible, alcanzable, relevante al problema
 
 (\"Titularse\" no es una repuesta válida. :\))]
 
+Se propone desarrollar un clasificador de aprendizaje automático que permita determinar las acciones clave en el desempeño futbolístico de los jugadores. Se utilizarán datos provenientes de StatsBomb para entrenar el clasificador y se evaluará su desempeño analizando el resultado de los partidos sin dichas acciones. El objetivo es lograr un clasificador que sea capaz de identificar las acciones clave en el desempeño futbolístico de los jugadores con una precisión superior al 80%.
+
 == Objetivos Específicos
 
 #guia(visible: mostrar_guias)[
