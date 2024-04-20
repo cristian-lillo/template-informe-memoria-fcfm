@@ -39,3 +39,8 @@ Turing38:
   organization: Princeton University
   location: NJ, USA
   doi: "10.1112/plms/s2-45.1.161"
+
+StatsBomb:
+  type: Web
+  title: StatsBomb
+  url: https://github.com/statsbomb/open-data
