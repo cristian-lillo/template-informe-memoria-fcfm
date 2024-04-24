@@ -53,13 +53,13 @@ El desarrollo de este clasificador ayudará a identificar áreas de mejora y a t
 
 = Situación Actual
 
-#guia(visible: true)[Discutir las soluciones o recursos existentes relacionados con el problema. Justificar por qué es necesario un trabajo novedoso.
+#guia(visible: mostrar_guias)[Discutir las soluciones o recursos existentes relacionados con el problema. Justificar por qué es necesario un trabajo novedoso.
 
 (1 a 2 páginas)]
 
-Ejemplos de referencias:
-- Conferencia: @CorlessJK97 // azucar sintactica para #cite("CorlessJK97")
-- Revista y Tesis: @NewmanT42 @Turing38 // para citas múltiples se usa #cite
+Actualmente, existen modelos como PlayeRank @PlayeRank que categorizan las acciones de los jugadores en el campo de juego, asignando un valor a cada acción. Sin embargo, estos modelos presentan limitaciones en la asignación de valores, ya que la gran mayoría de las acciones son calificadas con valores similares, lo que dificulta la identificación de las acciones clave en el desempeño de los jugadores. Este problema es algo que, según Guo et. al. @SVM, ocurre en modelos del tipo Support Vector Machine (SVM) al tener una alta cantidad de dimensensiones, pues se produce una reducción en la precisión y efectividad.
+
+También han sido realizados otros modelos que buscan una manera más simple de determinar si los jugadores realizaron acciones clave. Uno de ellos es propuesto por Duch et. al. @Duch, donde se define una métrica relacionada a la fracción de veces que el jugador realiza un pase en una jugada que termina en gol, lo que tiene sentido para delanteros y mediocampistas, pero no permite analizar correctamente las intervenciones de defensas y porteros en el juego. Existe también el trabajo de Brooks et. al. @Brooks, el cual tiene un enfoque en la cantidad de pases completados, y determina que su sistema de ranking termina favoreciendo a los jugadores más ofensivos, lo que no necesariamente se traduce en un mejor rendimiento del equipo.
 
 = Objetivos
 
@@ -84,7 +84,7 @@ El objetivo debería ser específico, medible, alcanzable, relevante al problema
 
 (\"Titularse\" no es una repuesta válida. :\))]
 
-Se propone desarrollar un clasificador de aprendizaje automático que permita determinar las acciones clave en el desempeño futbolístico de los jugadores. Se utilizarán datos provenientes de StatsBomb @StatsBomb para entrenar el clasificador y se evaluará comparándolo con las acciones que determinan el resultado de un partido de fútbol, como goles, asistencias, pases clave, entre otros. El objetivo es lograr un clasificador que sea capaz de identificar las acciones clave en el desempeño futbolístico de los jugadores con una precisión superior al 90%.
+Se propone desarrollar un clasificador de aprendizaje automático que permita determinar las acciones clave en el desempeño futbolístico de los jugadores. Se utilizarán datos provenientes de StatsBomb @StatsBomb, que han registrado eventos ocurridos en miles de partidos de fútbol, para entrenar el clasificador y se evaluará comparándolo con el modelo de PlayeRank @PlayeRank, que también categoriza las acciones de los jugadores en el campo de juego. El objetivo es lograr un clasificador que asigne correctamente la importancia de las acciones y que no sean calificadas la gran mayoría con valores similares, como ocurre en el modelo de PlayeRank.
 
 == Objetivos Específicos
 
@@ -101,7 +101,7 @@ Los objetivos específicos deberían \"sumar\" al objetivo general.
 
 + Obtener acciones realizadas por jugadores profesionales de fútbol. Estas deben estar en orden cronológico según la fecha del partido y el minuto de juego.
 + Entrenar distintos tipos de modelos, tanto de Machine Learning como de Deep Learning, para encontrar el que mejor se ajuste al problema y obtenga los mejores resultados.
-+ Evaluar el clasificador con un conjunto de datos de prueba y verificar si se alcanza la precisión esperada.
++ Evaluar el clasificador con un conjunto de datos de prueba y comparar resultados con PlayeRank.
 
 == Evaluación
 
@@ -110,7 +110,7 @@ Describe cómo vas a poder evaluar el trabajo en términos de cuán bien cumple 
 
 (1 a 2 párrafos)]
 
-Para evaluar el trabajo, se utilizará un conjunto de datos de prueba que no haya sido utilizado en el entrenamiento del clasificador. Se compararán las acciones identificadas por el clasificador con las acciones que influencian directamente el resultado de los partidos. La precisión del clasificador será la métrica principal para evaluar el trabajo, la cual deberá ser superior al 90% para considerar que el clasificador es efectivo.
+Para evaluar el trabajo, se utilizará un conjunto de datos de prueba que no haya sido utilizado en el entrenamiento del clasificador. Se compararán los pesos asignados por el clasificador para las acciones de los jugadores con los pesos asignados por PlayeRank, donde se espera que el clasificador sea capaz de asignar valores más precisos y diferenciados entre las acciones.
 
 = Solución Propuesta
 
@@ -140,7 +140,7 @@ Aquí se puede dar una lista preliminar de los pasos que se van a seguir para de
 + Seleccionar las variables más relevantes para el entrenamiento del clasificador.
 + Definir la mejor manera de representar los datos para el entrenamiento del modelo.
 + Entrenar distintos modelos de Machine Learning y Deep Learning para determinar cuál es el más óptimo para el problema.
-+ Evaluar el clasificador con un conjunto de datos de prueba y verificar si se alcanza la precisión esperada.
++ Evaluar el clasificador con un conjunto de datos de prueba y verificar si resultados son más precisos que en PlayeRank.
 + Escribir el informe final de la tesis.
 
 
