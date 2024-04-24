@@ -1,44 +1,88 @@
-CorlessJK97:
+PlayeRank:
   type: Article
-  title: A Sequence of Series for the Lambert W Function
+  title: "PlayeRank: Data-Driven Performance Evaluation and Player Ranking in Soccer via a Machine Learning Approach"
   author:
-    - Robert M. Corless
-    - David J. Jeffrey
-    - Donald E. Knuth
-  doi: "10.1145/258726.258783"
-  page-range: 197-204
-  parent:
-    type: Proceedings
-    title: International Symposium on Symbolic and Algebraic Computation
-    location: Kihei, Maui, Hawaii, USA.
-    year: 1997
-    isbn: 978-0-89791-875-6
-
-NewmanT42:
-  type: Article
-  title: A Formal Theorem in Church's Theory of Types
-  doi: "10.2307/2267552"
-  author:
-    - M. H. A. Newman
-    - Alan M. Turing
-  page-range: 28-33
+    - Luca Pappalardo
+    - Paolo Cintia
+    - Paolo Ferragina
+    - Emanuele Massucco
+    - Dino Pedreschi
+    - Fosca Giannotti
+  date: 2019-09
+  doi: "10.1145/3343172"
+  page-range: 1-27
   parent:
     type: Periodical
-    title: The Journal of Symbolic Logic
-    volume: 7
-    number: 1
-    year: 1942
-    publisher: Association for Symbolic Logic
-    url: http://www.jstor.org/stable/2267552
+    title: ACM Transactions on Intelligent Systems and Technology
+    year: 2019
+    publisher: Association for Computing Machinery
+    location: New York, NY, USA
+    issue: 5
+    volume: 10
+    issn: 2157-6904
+    url: https://doi.org/10.1145/3343172
+    journal: ACM Trans. Intell. Syst. Technol.
+    month: September
+    article-number: 59
+    page-total: 27
 
-Turing38:
+SVM:
   type: Article
-  title: Systems of Logic Based on Ordinals
-  author: Alan M. Turing
-  year: 1938
-  organization: Princeton University
-  location: NJ, USA
-  doi: "10.1112/plms/s2-45.1.161"
+  title: A fast separabilty-based feature selection method for high-dimensional remotly sensed image classification
+  author:
+    - Baofeng Guo
+    - R.I. Damper
+    - Steve R. Gunn
+    - J.D.B. Nelson
+  date: 2008-05
+  doi: 10.1016/j.patcog.2007.11.007
+  page-range: 1653-1662
+  parent:
+    type: Periodical
+    title: Pattern Recognition
+    year: 2008
+    publisher: Elsevier
+    issue: 5
+    volume: 41
+    issn: 0031-3203
+    url: https://doi.org/10.1016/j.patcog.2007.11.007
+
+Duch:
+  type: Article
+  title: Quantifying the Performance of Individual Players in a Team Activity
+  author:
+    - Jordi Duch
+    - Joshua S. Waitzman
+    - Luís A. Nunes Amaral
+  date: 2010-06
+  doi: 10.1371/journal.pone.0010937
+  parent:
+    type: Periodical
+    title: PLoS ONE
+    year: 2010
+    issue: 6
+    volume: 5
+    url: https://doi.org/10.1371/journal.pone.0010937
+
+Brooks:
+  type: Article
+  title: Developing a Data-Driven Player Ranking in Soccer Using Predictive Model Weights
+  author:
+    - Joel Brooks
+    - Matthew Kerr
+    - John Guttag
+  date: 2016-08
+  doi: 10.1145/2939672.2939695
+  page-range: 49–55
+  parent:
+    type: Periodical
+    title: Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems
+    year: 2016
+    publisher: Association for Computing Machinery
+    location: New York, NY, USA
+    isbn: 9781450342322
+    url: https://doi.org/10.1145/2939672.2939695
+    page-total: 7
 
 StatsBomb:
   type: Web
