@@ -1,0 +1,57 @@
+Te respondo entre líneas por mientras encuentro el PDF de tu propuesta
+
+El mar, 7 may 2024 a las 3:44, Aidan Hogan (<aidhog@gmail.com>) escribió:
+>
+> Resultado: Propuesta Aprobada
+>
+> Comentarios:
+>
+> En general el tema es interesante y relevante, pero la propuesta omite
+> muchos detalles. La voy a aprobar, pero queda un poco al borde. Algunos
+> comentarios:
+> * No queda muy claro qué resultado se espera del modelo exactamente.
+> Dice que PlayeRank asigna valores a diferentes aspectos, pero no
+> describe qué significan los valores.
+
+La verdad es que ellos tampoco, pero según entiendo son los pesos del
+problema de optimización MAX SUM (Peso_i * Feature_i) = GANAR
+
+> * La solución propone métodos de clasificación, pero parece ser que el
+> resultado esperado es más bien una regresión o un ranking.
+
+Son dos cosas distintas en el paper, una un método para clasificar en
+qué posición / parte del campo juegan (para así evaluar peras con
+peras y manzanas con manzanas) y otro el que evalúa qué tan bien
+realizan las acciones, de la mezcla de los dos se obtiene un puntaje y
+según pappalardo se puede hacer un ranking con eso
+
+> * La situación actual puede dar (mucho) más detalles sobre los conceptos
+> clave, como PlayeRank.
+
+eso ya lo hablamos
+
+> * Se habla de Deep Learning, pero ningún modelo propuesto explícitamente
+> es de Deep Learning.
+
+es la propuesta ¿no?
+
+> * Para una memoria se ve bien, pero como magíster en general uno espera
+> un pequeño avance en el estado del arte de la computación. No estoy
+> seguro si este tema cumple con lo que se espera como magíster del DCC
+> (del MDS quizás, sí), pero dejo eso a la evaluación del tema de magíster
+> en Tesis I.
+
+Eso también lo hablamos, sería la revisión sistemática + una propuesta
+con deep learning
+
+> Otra duda es sobre el alcance: si “solo” involucra tomar un
+> conjunto de datos existentes y probar diferentes modelos “off-the-shelf”
+> sobre estos datos, puede faltar un elemento más ambicioso.
+
+es lo que hay :P
+
+>
+>
+> ---------------------------------------------------------------
+> La propuesta queda aprobada, así que habrá que tomar en cuenta los
+> comentarios para la preparación del informe final.
