@@ -1,7 +1,7 @@
 #import "conf.typ": conf, guia, pronombre
 #let mostrar_guias = false
 #show: conf.with(
-    titulo: "Clasificador de Aprendizaje Automático para determinar Acciones Clave en el Desempeño Futbolístico de Jugadores",
+    titulo: "Revisión Sistemática de Acciones Clave en el Desempeño de Fubolistas Profesionales",
     autor: (nombre: "Cristian Lillo Ciero", pronombre: pronombre.el),
     informe: false,
     modalidad: "Doble Titulación con Magíster",
@@ -57,9 +57,9 @@ El desarrollo de este clasificador ayudará a identificar áreas de mejora y a t
 
 (1 a 2 páginas)]
 
-Actualmente, existen modelos como PlayeRank @PlayeRank que categorizan las acciones de los jugadores en el campo de juego, asignando un valor a cada acción. Sin embargo, estos modelos presentan limitaciones en la asignación de valores, ya que la gran mayoría de las acciones son calificadas con valores similares, lo que dificulta la identificación de las acciones clave en el desempeño de los jugadores. Este problema es algo que, según Guo et. al. @SVM, ocurre en modelos del tipo Support Vector Machine (SVM) al tener una alta cantidad de dimensensiones, pues se produce una reducción en la precisión y efectividad.
+Actualmente, existen modelos como PlayeRank @Pappalardo2019 que categorizan las acciones de los jugadores en el campo de juego, asignando un valor a cada acción. Sin embargo, estos modelos presentan limitaciones en la asignación de valores, ya que la gran mayoría de las acciones son calificadas con valores similares, lo que dificulta la identificación de las acciones clave en el desempeño de los jugadores. Este problema es algo que, según Guo et. al. \@SVM, ocurre en modelos del tipo Support Vector Machine (SVM) al tener una alta cantidad de dimensensiones, pues se produce una reducción en la precisión y efectividad.
 
-También han sido realizados otros modelos que buscan una manera más simple de determinar si los jugadores realizaron acciones clave. Uno de ellos es propuesto por Duch et. al. @Duch, donde se define una métrica relacionada a la fracción de veces que el jugador realiza un pase en una jugada que termina en gol, lo que tiene sentido para delanteros y mediocampistas, pero no permite analizar correctamente las intervenciones de defensas y porteros en el juego. Existe también el trabajo de Brooks et. al. @Brooks, el cual tiene un enfoque en la cantidad de pases completados, y determina que su sistema de ranking termina favoreciendo a los jugadores más ofensivos, lo que no necesariamente se traduce en un mejor rendimiento del equipo.
+También han sido realizados otros modelos que buscan una manera más simple de determinar si los jugadores realizaron acciones clave. Uno de ellos es propuesto por Duch et. al. @Duch2010, donde se define una métrica relacionada a la fracción de veces que el jugador realiza un pase en una jugada que termina en gol, lo que tiene sentido para delanteros y mediocampistas, pero no permite analizar correctamente las intervenciones de defensas y porteros en el juego. Existe también el trabajo de Brooks et. al. @Brooks2016, el cual tiene un enfoque en la cantidad de pases completados, y determina que su sistema de ranking termina favoreciendo a los jugadores más ofensivos, lo que no necesariamente se traduce en un mejor rendimiento del equipo.
 
 = Objetivos
 
@@ -84,7 +84,7 @@ El objetivo debería ser específico, medible, alcanzable, relevante al problema
 
 (\"Titularse\" no es una repuesta válida. :\))]
 
-Se propone desarrollar un clasificador de aprendizaje automático que permita determinar las acciones clave en el desempeño futbolístico de los jugadores. Se utilizarán datos provenientes de StatsBomb @StatsBomb, que han registrado eventos ocurridos en miles de partidos de fútbol, para entrenar el clasificador y se evaluará comparándolo con el modelo de PlayeRank @PlayeRank, que también categoriza las acciones de los jugadores en el campo de juego. El objetivo es lograr un clasificador que asigne correctamente la importancia de las acciones y que no sean calificadas la gran mayoría con valores similares, como ocurre en el modelo de PlayeRank.
+Se propone desarrollar un clasificador de aprendizaje automático que permita determinar las acciones clave en el desempeño futbolístico de los jugadores. Se utilizarán datos provenientes de StatsBomb \@StatsBomb, que han registrado eventos ocurridos en miles de partidos de fútbol, para entrenar el clasificador y se evaluará comparándolo con el modelo de PlayeRank @Pappalardo2019, que también categoriza las acciones de los jugadores en el campo de juego. El objetivo es lograr un clasificador que asigne correctamente la importancia de las acciones y que no sean calificadas la gran mayoría con valores similares, como ocurre en el modelo de PlayeRank.
 
 == Objetivos Específicos
 
@@ -121,7 +121,7 @@ Una descripción general de la solución propuesta: los datos, las técnicas, la
 
 Se planea desarrollar el modelo en el lenguaje de Python, haciendo uso de librerías como scikit-learn, TensorFlow y Keras para el entrenamiento de los modelos de Machine Learning y Deep Learning. Como se mencionó previamente, una parte importante del trabajo consiste en determinar cuál tipo de modelo es el más óptimo para la resolución de la problemática. Para ello, se analizarán distintos modelos, como Random Forest (RF), Support Vector Machine (SVM), Redes Neuronales Convolucionales (CNN), entre otros, y se compararán los resultados obtenidos.
 
-En relación a los datos, se dispone de una gran cantidad de archivos en formato JSON. Estos archivos están disponibles en el repositorio de GitHub de StatsBomb @StatsBomb y contienen información detallada de más de 3000 partidos. Los archivos se dividen en cuatro categorías: eventos, alineaciones, partidos y competiciones por temporada. Aunque el enfoque principal se centra en los eventos, se utilizarán los datos de las otras categorías para complementar la información y mejorar la calidad del clasificador.
+En relación a los datos, se dispone de una gran cantidad de archivos en formato JSON. Estos archivos están disponibles en el repositorio de GitHub de StatsBomb \@StatsBomb y contienen información detallada de más de 3000 partidos. Los archivos se dividen en cuatro categorías: eventos, alineaciones, partidos y competiciones por temporada. Aunque el enfoque principal se centra en los eventos, se utilizarán los datos de las otras categorías para complementar la información y mejorar la calidad del clasificador.
 
 Mediante el uso de librerías como Pandas y Matplotlib, se realizará un análisis exploratorio de los datos para identificar patrones y características relevantes. Se buscará determinar objetivamente cuáles son las acciones que modifican el resultado de un partido de fútbol y que, por lo tanto, deben ser consideradas como acciones clave por parte del modelo. Este análisis permitirá seleccionar las variables más relevantes para el entrenamiento del clasificador y descartar aquellas que no aporten información significativa.
 
@@ -145,7 +145,8 @@ Aquí se puede dar una lista preliminar de los pasos que se van a seguir para de
 
 
 #bibliography(
-    "bibliografia.yml",
+    "bibliografia.bib",
     title: "Referencias",
-    style: "ieee",
+    full: true,
+    style: "apa",
 )
